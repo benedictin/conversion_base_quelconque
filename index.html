@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion d'une base quelconque</title>
+</head>
+<body>
+    <script>
+        function convert(nombre,base){
+            nombre=prompt("Veuillez entrer un nombre");
+            base=prompt("Veuillez entré la base à convertir");
+            if(base==2){
+                base=(nombre%2).toString();
+                while(nombre>1){
+                    nombre=parseInt(nombre/2);
+                    base=(nombre%2)+(base);
+                }
+                alert("le nombre entré en base 2 = " + base)
+            }
+            if(base==8){
+                while(nombre!=0){
+                    base=(nombre%8).toString();
+                    nombre=parseInt(nombre/8);
+                    base=(nombre%8)+(base)
+                    alert("le nombre entré en base 8 = " + base)
+                }
+            }
+            if(base==16){
+                while(nombre!=0){
+                    base=(nombre%16).toString();
+                    nombre=parseInt(nombre/16);
+                    base=(nombre%16)+(base);
+                    alert("le nombre entré en base 16 = " + base);
+                }
+            }
+            else{
+                alert("le base supporté en entré sont:2,8,16 ");
+            }
+         }
+        convert();
+    </script>
+</body>
+</html>
