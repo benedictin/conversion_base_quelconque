@@ -19,7 +19,7 @@
                 }
                 alert("le nombre entré en base 2 = " + base)
             }
-            if(base==8){
+            else if(base==8){
                 while(nombre!=0){
                     base=(nombre%8).toString();
                     nombre=parseInt(nombre/8);
@@ -27,7 +27,7 @@
                     alert("le nombre entré en base 8 = " + base)
                 }
             }
-            if(base==16){
+            else if(base==16){
                 while(nombre!=0){
                     base=(nombre%16).toString();
                     nombre=parseInt(nombre/16);
